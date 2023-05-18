@@ -1,0 +1,58 @@
+{
+  "definitions": {
+    "Tender": {
+      "properties": {
+        "exclusionGrounds": {
+          "title": "Exclusion grounds",
+          "description": "Information about the criteria regarding the situation of a tenderer that can lead to its exclusion from the contracting process. For example: criminal convictions, bankruptcy, presence on a blacklist or failure to pay taxes.",
+          "$ref": "#/definitions/ExclusionGrounds"
+        }
+      }
+    },
+    "ExclusionGrounds": {
+      "title": "Exclusion grounds",
+      "description": "Information about the criteria regarding the situation of a tenderer that can lead to its exclusion from the contracting process. For example: criminal convictions, bankruptcy, presence on a blacklist or failure to pay taxes.",
+      "type": "object",
+      "properties": {
+        "criteria": {
+          "title": "Exclusion criteria",
+          "description": "The exclusion criteria.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ExclusionCriterion"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "wholeListMerge": true
+        }
+      },
+      "minProperties": 1
+    },
+    "ExclusionCriterion": {
+      "title": "Exclusion criterion",
+      "description": "A criterion regarding the situation of a tenderer that can lead to its exclusion from the contracting process.",
+      "type": "object",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "description": "The description of the criterion.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "type": {
+          "title": "Type",
+          "description": "The type of the criterion.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    }
+  }
+}
