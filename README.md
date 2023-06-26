@@ -2,7 +2,7 @@
 
 Adds an object to describe the criteria to exclude tenderers from participating in a contracting process.
 
-## Usage
+## Guidance
 
 If you use a codelist for `tender.exclusionGrounds.criteria.type`, you should explain where the codes are from in your publication policy/user guide.
 
