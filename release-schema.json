@@ -21,9 +21,9 @@
           "items": {
             "$ref": "#/definitions/ExclusionCriterion"
           },
-          "minItems": 1,
+          "wholeListMerge": true,
           "uniqueItems": true,
-          "wholeListMerge": true
+          "minItems": 1
         }
       },
       "minProperties": 1
